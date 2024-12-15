@@ -6,15 +6,15 @@ from .models import Department, Team, Employee
 
 @admin.register(Department)
 class DepartmentAdmin(admin.ModelAdmin):
-    list_display = ('name', 'description')
+    list_display = ('pk', 'name', 'description')
 
 
 @admin.register(Team)
 class TeamAdmin(admin.ModelAdmin):
-    list_display = ('name', 'department')
+    list_display = ('pk', 'name', 'department')
 
 
 @admin.register(Employee)
 class EmployeeAdmin(admin.ModelAdmin):
-    list_display = ('name', 'position', 'department', 'team', 'supervisor')
+    list_display = ('pk', 'name', 'position', 'department', 'team', 'supervisor')
     search_fields = ('name', 'employee_id')
